@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>JavaScript TODO APP</title>
+  <base href="./">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link type="text/css" rel="stylesheet" href="app/css/style.css" />
+  <script type="text/javascript" src="shared/libs/live.js"></script>
+  <script type="text/javascript" src="app/app.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="holder">
+      <div class="bg-plain">
+        <div class="bg-triangle"></div>
+      </div>
+      <div class="wrapper">
+        <div class="comp-container">
+          <header>
+            <div class="title">To-Do APP</div>
+            <div class="add no-selection" onclick="showCloseToDoModel()">
+              <span id="plus-icon" class="">+</span>
+            </div>
+          </header>
+
+          <main class="hide-scroll">
+            <div class="todo-list-container" id="todo-list-container">
+            </div>
+          </main>
+
+          <main class="todo-model hidden" id="todo-model">
+            <div class="todo-input-model">
+              <div class="todo-input-holder hidden" id="add-todo-holder">
+                <div class="title-label">Title:</div>
+                <div class="todo-input-title" contentEditable="true" id="todo-title"></div>
+                <div class="todo-input-content" contentEditable="true" id="todo-content"></div>
+                <div class="btn-holder no-selection">
+                  <div class="btn-align-right">
+                    <div class="btn clear-btn no-selection" id="clear" onclick="clearFocussedInput()"></div>
+                    <div class="btn delete-btn no-selection" id="delete" onclick="showCloseToDoModel()"></div>
+                    <div class="btn add-btn no-selection" id="add" onclick="addToDoTask()"></div>
+                  </div>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
